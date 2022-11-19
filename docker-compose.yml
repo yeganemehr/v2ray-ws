@@ -1,0 +1,9 @@
+version: "3.0"
+services:
+  v2ray:
+    image: ghcr.io/yeganemehr/v2ray-ws:latest
+    restart: on-failure
+    ports:
+      - "80:80"
+    volumes:
+      - ./v2ray.json:/etc/v2ray/config.json:ro
